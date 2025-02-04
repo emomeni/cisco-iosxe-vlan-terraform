@@ -25,6 +25,7 @@ Before using this configuration, ensure the following:
    git clone https://github.com/yourusername/cisco-iosxe-vlan.git
    cd cisco-iosxe-vlan
    ```
+
 2. Update the `provider` block in the `main.tf` file with your device's IP address, username, and password.
 
 3. Initialize Terraform:
@@ -46,3 +47,14 @@ Before using this configuration, ensure the following:
   ```bash
   terraform destroy
   ```
+
+## Configuration Details
+* Provider Block : Configures the `iosxe` provider with settings such as `request_timeout`, `insecure`, `address`, `username`, and `password`.
+* Resource Block : Uses the `iosxe_rest` resource to create or update a VLAN with ID 511 and name VLAN511.
+
+## Variables
+1. address: IP address of the Cisco IOS XE device; 192.168.1.1
+2. username: Username for authentication; admin
+3. password: Password for authentication; password
+
+Note : Replace these values with your actual device credentials. 
