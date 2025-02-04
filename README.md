@@ -58,3 +58,8 @@ Before using this configuration, ensure the following:
 3. password: Password for authentication; password
 
 Note : Replace these values with your actual device credentials. 
+
+## Security Considerations
+* Insecure Mode : The `insecure` parameter should never be set to `true` in production environments. It disables SSL certificate verification, which poses a security risk.
+* Credentials : Avoid hardcoding sensitive information like passwords in the configuration file. Use environment variables or Terraform's `terraform.tfvars` file for secure handling of secrets.
+* Backup : Always back up your device configurations before applying changes via Terraform.
